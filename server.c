@@ -73,7 +73,7 @@ int main(void) {
   uv_loop_init(pLoop);
 
   uv_tcp_init(pLoop, &sTCP);
-  uv_ip4_addr("0.0.0.0", 888, &sListenAddr);
+  uv_ip4_addr("127.0.0.1", 8888, &sListenAddr);
   uv_tcp_bind(&sTCP, (const struct sockaddr*)&sListenAddr, 0);
 
   iError = uv_listen((uv_stream_t*)&sTCP, BACKLOG_LENGTH, onConnect);

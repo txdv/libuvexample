@@ -63,7 +63,7 @@ int main(int argc, char **argv) {
   uv_tcp_init(pLoop, &sTCP);
 
   struct sockaddr_in sConnAddr;
-  uv_ip4_addr("127.0.0.1", 888, &sConnAddr);
+  uv_ip4_addr("127.0.0.1", 8888, &sConnAddr);
 
   uv_connect_t sConn;
   uv_tcp_connect(&sConn, &sTCP, (const struct sockaddr *)&sConnAddr, onConnect);
