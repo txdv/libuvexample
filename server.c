@@ -8,7 +8,7 @@ int iError;
 
 void allocFn(uv_handle_t *pHandle, size_t uiSuggestedSize, uv_buf_t *pBuf) {
   printf("allocFn\n");
-  uv_buf_init(malloc(sizeof(uiSuggestedSize)), uiSuggestedSize);
+  *pBuf = uv_buf_init(malloc(sizeof(uiSuggestedSize)), uiSuggestedSize);
 }
 
 void onRead(uv_stream_t *pClientStream, ssize_t iLength, const uv_buf_t *pBuf) {
