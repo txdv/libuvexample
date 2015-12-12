@@ -73,6 +73,5 @@ int main(int argc, char **argv) {
   uv_loop_close(pLoop);
   free(pLoop);
 
-  system("pause");
   return 0;
 }
